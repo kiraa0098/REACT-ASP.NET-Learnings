@@ -55,14 +55,14 @@ The frontend implements the following features for `TempTestRecord` entities, us
 *   **Record Creation Page (`/records/new`):** Implemented to create new records (`Name`, `Description`). Uses `RecordForm` component (React Hook Form + MUI) for input, and `useCreateRecordMutation` for submission.
 *   **Audit Trail and Status Management UI:** *Not applicable for `TempTestRecordModel`.* Frontend components no longer display or manage fields like `IsGlobal`, `IsDefault`, `IsDeprecated` as they are not part of `TempTestRecordModel`.
 *   **Global UI State & Notifications:** Implemented using Zustand (`useAppStore`) for a global loading overlay (`CircularProgress`) and snackbar messages (`Snackbar`, `Alert`) for user feedback, ensuring stable UI during loading.
-*   **UI Polish:** Implemented global centering of content within `PageLayout.tsx` and applied consistent `Paper`-like styling to page content areas for improved visual appeal and readability.
+*   **UI Polish:** Implemented global centering of content within `PageLayout.tsx` and applied consistent `Paper`-like styling to page content areas for improved visual appeal and readability. Enhanced delete confirmation using a custom `ConfirmDialog`. Fixed UI stability issues during loading/error states across pages.
 
 ### Frontend Project Structure (within `REACT-WEB/src/`):
 
 The project structure has been established according to the detailed plan:
 
 - `src/App.tsx`: Main layout and React Router setup, includes global loading overlay.
-- `src/index.css`: Global CSS styles (modified to remove conflicting body centering styles).
+- `src/index.css`: Global CSS styles (modified to remove conflicting body centering styles for stable layout).
 - `src/main.tsx`: Entry point for the React application, integrating `QueryClientProvider`, `ThemeProvider`, `CssBaseline`, and `BrowserRouter`.
 - `src/reset.css`: CSS reset or normalize styles (if used).
 - `src/vite-env.d.ts`: TypeScript declaration file for Vite environment variables.
@@ -72,11 +72,14 @@ The project structure has been established according to the detailed plan:
     - `cdmApi.ts`: Configures Axios instance and defines all API client functions, currently using in-memory mock data, aligned with `TempTestRecordController`'s endpoint and data types.
     - `axiosInstance.ts`: Axios instance with base URL configured to `https://localhost:7082`.
   - `assets/`: Images, icons, fonts, etc., used across the application.
-  - `components/`: Reusable UI components (e.g., `Button`, `Modal`, `Card`).
+  - `components/`: Reusable UI components.
+    - `ConfirmDialog.tsx`: Custom Material-UI dialog for enhanced delete confirmation.
+    - *(other generic components as needed, e.g., `Button`, `Modal`, `Card`)*.
   - `config/`: Application-wide configuration settings.
   - `constants/`: Global constants and magic strings.
   - `hooks/`: Custom React hooks for reusable logic (e.g., `useAuth.ts` if auth is added).
-  - `layouts/`: Layout components (e.g., `PageLayout.tsx` for centered content).
+  - `layouts/`: Layout components.
+    - `PageLayout.tsx`: Provides a consistent, centered, and structurally stable wrapper for page content.
   - `models/`: TypeScript interfaces/types for data structures.
     - `cdm.ts`: Defines `Record` (aligned with `TempTestRecordModel`), `CreateRecordDto`, `UpdateRecordDto`, and `PagedResult`.
   - `navigation/`: Navigation-related logic or components.
@@ -88,17 +91,17 @@ The project structure has been established according to the detailed plan:
 
 - `src/features/`: Feature-specific modules, organizing code by business domain.
   - `records/`: All code related to the 'Records' feature.
-    - `components/RecordTable.tsx`: Displays `TempTestRecord` data (`Id`, `Name`, `Description`).
+    - `components/RecordTable.tsx`: Displays `TempTestRecord` data (`Id`, `Name`, `Description`), includes improved delete action trigger.
     - `components/RecordForm.tsx`: Form for creating/editing `TempTestRecord` (`Name`, `Description`).
     - `hooks/index.ts`: Exports React Query hooks: `useRecordsQuery` (now handles `PagedResult`), `useRecordDetailQuery`, `useCreateRecordMutation`, `useUpdateRecordMutation`, `useDeleteRecordMutation` (all adapted for `number` IDs and `Name` property).
-    - `pages/RecordListPage.tsx`: Displays `RecordTable` and integrates `useRecordsQuery`, `useDeleteRecordMutation`.
-    - `pages/RecordFormPage.tsx`: Handles create/edit, integrates `useRecordDetailQuery`, `useCreateRecordMutation`, `useUpdateRecordMutation`.
+    - `pages/RecordListPage.tsx`: Displays `RecordTable` and integrates `useRecordsQuery`, `useDeleteRecordMutation`, now using `ConfirmDialog`. Exported as `export default RecordListPage;` (fixed).
+    * `pages/RecordFormPage.tsx`: Handles create/edit, integrates `useRecordDetailQuery`, `useCreateRecordMutation`, `useUpdateRecordMutation`. Handles rendering stably during loading/error states.
 
 ---
 
 ## Next Steps: Connecting to the V1-CDM-API Backend
 
-The frontend is now ready for integration with the actual V1-CDM-API backend. **It is specifically configured to work with the `TempTestRecordController`'s API endpoints and `TempTestRecordModel` data structure.**
+The frontend is now ready for integration with the actual V1-CDM-API backend. **It is specifically configured to work with the `TempTestRecordController`'s API endpoints and `TempTestRecordModel` data structure.** All frontend bugs related to blank pages, HTML structure, and stable loading have been addressed.
 
 Once the backend is operational and accessible, follow these steps to switch from mock data to real API calls:
 
