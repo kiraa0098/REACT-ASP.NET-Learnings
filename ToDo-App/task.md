@@ -116,4 +116,4 @@ Based on the `folder-structure.md` guidelines, the React frontend would likely o
   - `pages/RecordListPage.tsx`: The main page component that renders `RecordTable` and associated filters.
   - `pages/RecordFormPage.tsx`: The main page component that renders `RecordForm` for creation or editing.
 
-This design ensures a clear separation of concerns, efficient data handling, and a consistent user experience while integrating all the specified tools.2
+This design ensures a clear separation of concerns, efficient data handling, and a consistent user experience while integrating all the specified tools.
