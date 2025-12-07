@@ -94,26 +94,41 @@ To build a robust and maintainable React frontend that integrates with the `V1-C
       - A global Zustand store (e.g., `useAppStore`) could manage application theme, global loading spinners (triggered by `useQuery` or `useMutation` lifecycle events), or transient notification messages.
       - This decouples UI state from server data fetching concerns handled by React Query.
 
-### Frontend Project Structure (within `src/`):
-
-Based on the `folder-structure.md` guidelines, the React frontend would likely organize these features and tools as follows:
+### Frontend Project Structure (within `REACT-WEB/src/`):
 
 - `src/App.tsx`: Main layout and React Router setup.
-- `src/common/`:
-  - `api-service/cdmApi.ts`: Configures Axios instance and defines all API client functions (`getRecords`, `getRecordById`, `createRecord`, `updateRecord`, `deleteRecord`).
-  - `components/`: Generic MUI-based components used everywhere (e.g., `CustomTable`, `FormInputWrapper`).
-  - `hooks/useAuth.ts`: (If authentication is added) A custom hook for authentication logic.
-  - `stores/useAppStore.ts`: Zustand store for global UI state, theme, etc.
-  - `types/cdm.ts`: TypeScript interfaces for `IRecord`, `ICreateRecordDto`, `IUpdateRecordDto`, matching `V1-CDM-API`'s DTOs.
-- `src/features/records/`:
-  - `components/RecordTable.tsx`: Uses `useRecordsQuery` to fetch and display data in a MUI table.
-  - `components/RecordForm.tsx`: Uses React Hook Form and MUI inputs for create/edit.
-  - `hooks/useRecordsQuery.ts`: React Query hook for fetching record lists.
-  - `hooks/useRecordDetailQuery.ts`: React Query hook for fetching single record details.
-  - `hooks/useCreateRecordMutation.ts`: React Query mutation hook for creating records.
-  - `hooks/useUpdateRecordMutation.ts`: React Query mutation hook for updating records.
-  - `hooks/useDeleteRecordMutation.ts`: React Query mutation hook for deleting records.
-  - `pages/RecordListPage.tsx`: The main page component that renders `RecordTable` and associated filters.
-  - `pages/RecordFormPage.tsx`: The main page component that renders `RecordForm` for creation or editing.
+- `src/index.css`: Global CSS styles (e.g., typography, base styles).
+- `src/main.tsx`: Entry point for the React application.
+- `src/reset.css`: CSS reset or normalize styles (if used).
+- `src/vite-env.d.ts`: TypeScript declaration file for Vite environment variables.
+
+- `src/common/`: Shared, reusable utilities and components across features.
+  - `api-service/`: Logic for interacting with backend APIs.
+    - `cdmApi.ts`: Configures Axios instance and defines all API client functions (`getRecords`, `getRecordById`, `createRecord`, `updateRecord`, `deleteRecord`).
+    - `axiosInstance.ts`: Axios instance with base URL configuration.
+  - `assets/`: Images, icons, fonts, etc., used across the application.
+  - `components/`: Reusable UI components (e.g., `Button`, `Modal`, `Card`).
+  - `config/`: Application-wide configuration settings.
+  - `constants/`: Global constants and magic strings.
+  - `hooks/`: Custom React hooks for reusable logic (e.g., `useAuth.ts` if auth is added).
+  - `layouts/`: Layout components (e.g., `Header`, `Footer`, `Sidebar`, `PageLayout`).
+  - `models/`: TypeScript interfaces/types for data structures (e.g., `IRecord`, `ICreateRecordDto`, `IUpdateRecordDto`).
+  - `navigation/`: Navigation-related logic or components.
+  - `routes/`: Centralized routing definitions (e.g., using React Router).
+  - `stores/`: State management stores (e.g., `useAppStore.ts` for Zustand).
+  - `themes/`: Theming-related files (e.g., theme providers, color palettes).
+  - `utils/`: Generic utility functions (e.g., date formatting, validation helpers).
+
+- `src/features/`: Feature-specific modules, organizing code by business domain.
+  - `records/`: All code related to the 'Records' feature (our current task).
+    - `components/RecordTable.tsx`: Uses `useRecordsQuery` to fetch and display data in a MUI table.
+    - `components/RecordForm.tsx`: Uses React Hook Form and MUI inputs for create/edit.
+    - `hooks/useRecordsQuery.ts`: React Query hook for fetching record lists.
+    - `hooks/useRecordDetailQuery.ts`: React Query hook for fetching single record details.
+    - `hooks/useCreateRecordMutation.ts`: React Query mutation hook for creating records.
+    - `hooks/useUpdateRecordMutation.ts`: React Query mutation hook for updating records.
+    - `hooks/useDeleteRecordMutation.ts`: React Query mutation hook for deleting records.
+    - `pages/RecordListPage.tsx`: The main page component that renders `RecordTable` and associated filters.
+    - `pages/RecordFormPage.tsx`: The main page component that renders `RecordForm` for creation or editing.
 
 This design ensures a clear separation of concerns, efficient data handling, and a consistent user experience while integrating all the specified tools.
