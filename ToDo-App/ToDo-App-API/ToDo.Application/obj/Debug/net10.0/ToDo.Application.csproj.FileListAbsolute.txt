@@ -1,0 +1,32 @@
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.deps.json
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.pdb
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.csproj.AssemblyReference.cache
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.AssemblyInfoInputs.cache
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.AssemblyInfo.cs
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.csproj.CoreCompileInputs.cache
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.App.AD959D57.Up2Date
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\refint\ToDo.Application.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.pdb
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ref\ToDo.Application.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.csproj.AssemblyReference.cache
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.AssemblyInfoInputs.cache
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.AssemblyInfo.cs
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.csproj.CoreCompileInputs.cache
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\refint\ToDo.Application.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.Application.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.deps.json
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Application.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Persistence.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\bin\Debug\net10.0\ToDo.Persistence.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ToDo.App.AD959D57.Up2Date
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Application\obj\Debug\net10.0\ref\ToDo.Application.dll

@@ -1,0 +1,22 @@
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.deps.json
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.AssemblyInfoInputs.cache
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.AssemblyInfo.cs
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\refint\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\potangina mo\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ref\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.deps.json
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\bin\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.AssemblyInfoInputs.cache
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.AssemblyInfo.cs
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\refint\ToDo.Domain.dll
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ToDo.Domain.pdb
+C:\Users\alwynn\Desktop\Todo-App\ToDo-App-API\ToDo.Domain\obj\Debug\net10.0\ref\ToDo.Domain.dll
