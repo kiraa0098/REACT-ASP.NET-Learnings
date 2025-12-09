@@ -1,13 +1,13 @@
-// C:\Users\alwynn\Desktop\Todo-App\REACT-CRUD-WITH-V1-CDM-API-INTEGRATION\REACT-WEB\src\common\api-service\axiosInstance.ts
 
-import axios from 'axios';
 
-const API_BASE_URL = 'https://localhost:7082'; // Assuming backend runs on this port
+import axios from "axios";
+
+const API_BASE_URL = "http://localhost:8090";
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 

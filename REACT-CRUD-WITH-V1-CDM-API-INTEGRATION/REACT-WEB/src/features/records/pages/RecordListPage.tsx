@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, Typography, Button, Paper } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import { Box, Typography, Button, Paper, TextField, Divider, IconButton } from "@mui/material";
+import { Add as AddIcon, ArrowBackIos as ArrowBackIcon, ArrowForwardIos as ArrowForwardIcon } from "@mui/icons-material";
 import RecordTable from "../components/RecordTable";
 import { useRecordsQuery, useDeleteRecordMutation } from "../hooks/index";
 import { useAppStore } from "../../../common/stores/useAppStore";
@@ -11,6 +11,9 @@ const RecordListPage: React.FC = () => {
   const navigate = useNavigate();
   const { showSnackbar, setLoading } = useAppStore();
 
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+  const [pageInput, setPageInput] = useState<string>(page.toString());
   const [openConfirm, setOpenConfirm] = useState(false);
   const [recordToDeleteId, setRecordToDeleteId] = useState<number | null>(null);
 
@@ -18,8 +21,9 @@ const RecordListPage: React.FC = () => {
     data: pagedRecords,
     isLoading: isQueryLoading,
     isError: isQueryError,
-  } = useRecordsQuery();
-  const records = pagedRecords?.Items || [];
+  } = useRecordsQuery(page, pageSize);
+  const records = pagedRecords?.items || [];
+  const totalPages = pagedRecords?.totalPages || 1;
   const deleteMutation = useDeleteRecordMutation();
 
   useEffect(() => {
@@ -57,27 +61,47 @@ const RecordListPage: React.FC = () => {
     setRecordToDeleteId(null);
   };
 
+  const handlePageInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    if (value === "") {
+      setPageInput("");
+      return;
+    }
+    if (/^\d+$/.test(value)) {
+      setPageInput(value);
+      const newPage = parseInt(value, 10);
+      if (newPage > 0 && newPage <= totalPages) {
+        setPage(newPage);
+      }
+    }
+  };
+
+  useEffect(() => {
+    setPageInput(page.toString());
+  }, [page]);
+
   return (
     <Box
       sx={{
         bgcolor: "background.paper",
         boxShadow: 3,
         borderRadius: 2,
-        p: 4,
+        p: { xs: 2, sm: 3, md: 4 },
         display: "flex",
         flexDirection: "column",
         maxWidth: 1000,
         mx: "auto",
-        minHeight: "400px", // Maintain a minimum height for stable layout
+        minHeight: "400px",
       }}
     >
       <Box
         sx={{
-          my: 2,
+          mb: 2,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "100%",
+          flexWrap: "wrap",
+          gap: 2,
         }}
       >
         <Typography variant="h4" component="h1">
@@ -92,18 +116,56 @@ const RecordListPage: React.FC = () => {
         </Button>
       </Box>
 
-      {isQueryError ? ( // Conditionally render error message within the main Box
-        <Typography color="error" sx={{ textAlign: "center", my: 2 }}>
-          Error loading records.
-        </Typography>
+      <Divider sx={{ mb: 3 }} />
+
+      {isQueryError ? (
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Typography color="error" sx={{ textAlign: "center", my: 2 }}>
+            Error loading records. Please try again.
+          </Typography>
+        </Box>
       ) : (
-        <RecordTable
-          records={records}
-          isLoading={false}
-          isError={false}
-          onEdit={handleEdit}
-          onDelete={handleDeleteClick}
-        />
+        <>
+          <RecordTable
+            records={records}
+            isLoading={isQueryLoading}
+            isError={isQueryError}
+            onEdit={handleEdit}
+            onDelete={handleDeleteClick}
+          />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mt: 3,
+              p: 1,
+              gap: 1,
+            }}
+          >
+            <IconButton onClick={() => setPage(page - 1)} disabled={page <= 1}>
+              <ArrowBackIcon />
+            </IconButton>
+            <Typography variant="body2" sx={{ mx: 1 }}>
+              Page
+            </Typography>
+            <TextField
+              value={pageInput}
+              onChange={handlePageInputChange}
+              type="text"
+              inputProps={{ inputMode: "numeric", pattern: "[0-9]*" , style: { textAlign: 'center' }}}
+              sx={{ width: 60 }}
+              size="small"
+              variant="outlined"
+            />
+            <Typography variant="body2" sx={{ mx: 1 }}>
+              of {totalPages}
+            </Typography>
+            <IconButton onClick={() => setPage(page + 1)} disabled={page >= totalPages}>
+              <ArrowForwardIcon />
+            </IconButton>
+          </Box>
+        </>
       )}
 
       <ConfirmDialog

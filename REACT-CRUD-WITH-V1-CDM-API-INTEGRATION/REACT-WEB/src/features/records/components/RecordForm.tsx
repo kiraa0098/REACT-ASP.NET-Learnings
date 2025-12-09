@@ -1,5 +1,3 @@
-// C:\Users\alwynn\Desktop\Todo-App\REACT-CRUD-WITH-V1-CDM-API-INTEGRATION\REACT-WEB\src\features\records\components\RecordForm.tsx
-
 import React, { useEffect } from "react";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm, Controller } from "react-hook-form";
@@ -11,7 +9,7 @@ import type {
 } from "../../../common/models/cdm";
 
 interface RecordFormProps {
-  initialData?: Record; // For editing existing records
+  initialData?: Record;
   onSubmit: SubmitHandler<CreateRecordDto | UpdateRecordDto>;
   isSubmitting: boolean;
   isEditMode: boolean;
@@ -30,17 +28,15 @@ const RecordForm: React.FC<RecordFormProps> = ({
     formState: { errors },
   } = useForm<CreateRecordDto | UpdateRecordDto>({
     defaultValues: {
-      Name: initialData?.Name || "", // Changed from Title to Name
-      Description: initialData?.Description || "",
-      // Removed IsGlobal, IsDefault, IsDeprecated, DeprecationDate
+      Name: initialData?.name || "",
+      Description: initialData?.description || "",
     },
   });
 
   useEffect(() => {
     reset({
-      Name: initialData?.Name || "", // Changed from Title to Name
-      Description: initialData?.Description || "",
-      // Removed IsGlobal, IsDefault, IsDeprecated, DeprecationDate
+      Name: initialData?.name || "",
+      Description: initialData?.description || "",
     });
   }, [initialData, reset]);
 
@@ -52,20 +48,20 @@ const RecordForm: React.FC<RecordFormProps> = ({
       sx={{ mt: 1 }}
     >
       <Controller
-        name="Name" // Changed from Title to Name
+        name="Name"
         control={control}
-        rules={{ required: "Name is required" }} // Changed from Title to Name
+        rules={{ required: "Name is required" }}
         render={({ field }) => (
           <TextField
             {...field}
             margin="normal"
             required
             fullWidth
-            id="name" // Changed from title to name
-            label="Name" // Changed from Title to Name
+            id="name"
+            label="Name"
             autoFocus
-            error={!!errors.Name} // Changed from Title to Name
-            helperText={errors.Name ? errors.Name.message : ""} // Changed from Title to Name
+            error={!!errors.Name}
+            helperText={errors.Name ? errors.Name.message : ""}
           />
         )}
       />
@@ -86,7 +82,6 @@ const RecordForm: React.FC<RecordFormProps> = ({
           />
         )}
       />
-      {/* Removed IsGlobal, IsDefault, IsDeprecated, DeprecationDate controls */}
 
       <Button
         type="submit"

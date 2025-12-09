@@ -1,5 +1,3 @@
-// C:\Users\alwynn\Desktop\Todo-App\REACT-CRUD-WITH-V1-CDM-API-INTEGRATION\REACT-WEB\src\features\records\components\RecordTable.tsx
-
 import React from "react";
 import {
   Table,
@@ -19,8 +17,8 @@ import type { Record } from "../../../common/models/cdm";
 
 interface RecordTableProps {
   records: Record[];
-  onEdit: (id: number) => void; // Changed id type to number
-  onDelete: (id: number) => void; // Changed id type to number
+  onEdit: (id: number) => void;
+  onDelete: (id: number) => void;
   isLoading: boolean;
   isError: boolean;
 }
@@ -50,23 +48,22 @@ const RecordTable: React.FC<RecordTableProps> = ({
         <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell> {/* Changed from Title to Name */}
+            <TableCell>Name</TableCell>
             <TableCell>Description</TableCell>
-            {/* Removed Is Global, Is Default, Is Deprecated headers */}
             <TableCell align="right">Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {records.map((record) => (
             <TableRow
-              key={record.Id}
+              key={record.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {record.Id}
+                {record.id}
               </TableCell>
-              <TableCell>{record.Name}</TableCell> {/* Changed from Title to Name */}
-              <TableCell>{record.Description?.substring(0, 50)}...</TableCell>
+              <TableCell>{record.name}</TableCell>
+              <TableCell>{record.description?.substring(0, 50)}...</TableCell>
               <TableCell align="right">
                 <Box
                   sx={{ display: "flex", justifyContent: "flex-end", gap: 1 }}
@@ -74,7 +71,7 @@ const RecordTable: React.FC<RecordTableProps> = ({
                   <Button
                     variant="outlined"
                     startIcon={<EditIcon />}
-                    onClick={() => record.Id && onEdit(record.Id)} // Ensure Id is not null
+                    onClick={() => record.id && onEdit(record.id)}
                     size="small"
                   >
                     Edit
@@ -83,7 +80,7 @@ const RecordTable: React.FC<RecordTableProps> = ({
                     variant="outlined"
                     color="error"
                     startIcon={<DeleteIcon />}
-                    onClick={() => record.Id && onDelete(record.Id)} // Ensure Id is not null
+                    onClick={() => record.id && onDelete(record.id)}
                     size="small"
                   >
                     Delete

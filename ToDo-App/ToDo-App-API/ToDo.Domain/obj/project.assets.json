@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alwynn\\.nuget\\packages\\": {}
+    "C:\\Users\\b0490\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
       "projectName": "ToDo.Domain",
-      "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
-      "packagesPath": "C:\\Users\\alwynn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\obj\\",
+      "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
+      "packagesPath": "C:\\Users\\b0490\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alwynn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\b0490\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

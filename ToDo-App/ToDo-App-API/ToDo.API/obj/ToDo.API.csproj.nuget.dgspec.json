@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj": {}
+    "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj": {
+    "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj",
+        "projectUniqueName": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj",
         "projectName": "ToDo.API",
-        "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj",
-        "packagesPath": "C:\\Users\\alwynn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.API\\obj\\",
+        "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.API\\ToDo.API.csproj",
+        "packagesPath": "C:\\Users\\b0490\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alwynn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\b0490\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -26,11 +26,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj": {
-                "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj"
+              "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj": {
+                "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj"
               },
-              "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
-                "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj"
+              "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
+                "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj"
               }
             }
           }
@@ -51,6 +51,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
@@ -511,17 +515,17 @@
         }
       }
     },
-    "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj": {
+    "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj",
+        "projectUniqueName": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj",
         "projectName": "ToDo.Application",
-        "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj",
-        "packagesPath": "C:\\Users\\alwynn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Application\\obj\\",
+        "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\ToDo.Application.csproj",
+        "packagesPath": "C:\\Users\\b0490\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alwynn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\b0490\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -533,11 +537,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
-                "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj"
+              "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
+                "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj"
               },
-              "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
-                "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj"
+              "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
+                "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj"
               }
             }
           }
@@ -558,6 +562,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[12.1.1, )"
@@ -865,17 +873,17 @@
         }
       }
     },
-    "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
+    "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
         "projectName": "ToDo.Domain",
-        "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
-        "packagesPath": "C:\\Users\\alwynn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\obj\\",
+        "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj",
+        "packagesPath": "C:\\Users\\b0490\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alwynn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\b0490\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1198,17 +1206,17 @@
         }
       }
     },
-    "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
+    "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj",
         "projectName": "ToDo.Persistence",
-        "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj",
-        "packagesPath": "C:\\Users\\alwynn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\ToDo.Persistence.csproj",
+        "packagesPath": "C:\\Users\\b0490\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alwynn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\b0490\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1220,8 +1228,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
-                "projectPath": "C:\\Users\\alwynn\\Desktop\\Todo-App\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj"
+              "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj": {
+                "projectPath": "C:\\Users\\b0490\\OneDrive\\Desktop\\REACT-ASP.NET-Learnings\\ToDo-App\\ToDo-App-API\\ToDo.Domain\\ToDo.Domain.csproj"
               }
             }
           }

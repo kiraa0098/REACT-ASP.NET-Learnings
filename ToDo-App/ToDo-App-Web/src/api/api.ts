@@ -24,3 +24,10 @@ export const deleteToDo = async (id: string): Promise<void> => {
   await axios.delete(`/ToDo/${id}`);
 };
 
+export const exportToDos = async (): Promise<Blob> => {
+  const response = await axios.get("/ToDo/export", {
+    responseType: 'blob', // Important for downloading files
+  });
+  return response.data;
+};
+

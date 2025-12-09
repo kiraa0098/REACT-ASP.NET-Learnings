@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using ToDo.Application.Behaviors;
+using ToDo.Application.Export;
 using ToDo.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddControllers()
     });
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssembly(typeof(ToDo.Application.Class1).Assembly);
+builder.Services.AddScoped<IToDoItemExporter, ToDoItemExporter>();
 
 // Configure PostgreSQL and DbContext
 builder.Services.AddDbContext<ToDoDbContext>(options =>

@@ -6,6 +6,7 @@ using ToDo.Application.UseCases.ToDoItems.Commands.DeleteToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Commands.UpdateToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItemById;
 using ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItems;
+using ToDo.Application.UseCases.ToDoItems.Queries.ExportToDoItems;
 
 namespace ToDo.API.Controllers
 {
@@ -63,6 +64,14 @@ namespace ToDo.API.Controllers
             var command = new DeleteToDoItemCommand { Id = id };
             await _mediator.Send(command);
             return NoContent();
+        }
+
+        [HttpGet("export")]
+        public async Task<FileResult> ExportToDoItems()
+        {
+            var query = new ExportToDoItemsQuery();
+            var result = await _mediator.Send(query);
+            return File(result, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ToDoItems.xlsx");
         }
     }
 }
