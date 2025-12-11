@@ -13,6 +13,10 @@ const AddToDoForm: React.FC = () => {
     const addToDo = useToDoStore((state) => state.addToDo);
 
     const onSubmit = (data: IFormInput) => {
+        if (!navigator.onLine) {
+            toast.error('You are offline. Please check your internet connection.');
+            return;
+        }
         if (data.title.trim() === '') {
             toast.error('To-Do title cannot be empty.');
             return;
