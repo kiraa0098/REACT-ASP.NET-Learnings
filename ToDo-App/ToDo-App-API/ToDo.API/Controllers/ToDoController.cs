@@ -6,7 +6,7 @@ using ToDo.Application.UseCases.ToDoItems.Commands.DeleteToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Commands.UpdateToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItemById;
 using ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItems;
-
+using ToDo.Application.UseCases.ToDoItems.Queries.ExportToDoItems;
 
 namespace ToDo.API.Controllers
 {
@@ -22,18 +22,18 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<TodoModel>> GetToDoItems()
+        public async Task<ActionResult<IEnumerable<TodoModel>>> GetToDoItems()
         {
-            var query = new GetToDoItemsQuery();
+            
+            var query = new GetToDoItemsQuery(); 
             var result = await _mediator.Send(query);
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoModel>> GetToDoItem([FromRoute] Guid id)
+        public async Task<ActionResult<TodoModel>> GetToDoItem([FromRoute] GetToDoItemByIdQuery query)
         {
-            var query = new GetToDoItemByIdQuery { Id = id };
-            var result = await _mediator.Send(query);
+            var result = await _mediator.Send(query); 
             return result != null ? Ok(result) : NotFound();
         }
 
@@ -59,18 +59,19 @@ namespace ToDo.API.Controllers
 
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteToDoItem(Guid id, DeleteToDoItemCommand command)
-
+        public async Task<IActionResult> DeleteToDoItem(Guid id)
         {
+            var command = new DeleteToDoItemCommand { Id = id };
             await _mediator.Send(command);
             return NoContent();
         }
 
-        // [HttpGet("export")]
-        // public async Task<ActionResult> ExportToDoItems( query)
-        // {
-        //     var fileBytes = await _mediator.Send(query);
-        //     return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ToDoItems.xlsx");
-        // }
+        [HttpGet("export")]
+        public async Task<FileResult> ExportToDoItems()
+        {
+            var query = new ExportToDoItemsQuery();
+            var result = await _mediator.Send(query);
+            return File(result, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ToDoItems.xlsx");
+        }
     }
 }

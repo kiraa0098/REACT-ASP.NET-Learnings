@@ -37,6 +37,6 @@ namespace ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItemById
                 IsDone = todoItem.IsDone
             };
         }
-#nullable restore
+        #nullable restore
     }
 }
