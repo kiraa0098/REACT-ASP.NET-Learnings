@@ -1,4 +1,5 @@
 using MediatR;
+using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc;
 using ToDo.Application.UseCases.Models;
 using ToDo.Application.UseCases.ToDoItems.Commands.CreateToDoItem;
@@ -22,6 +23,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet]
+        [Description("Fetch all To Do")] 
         public async Task<ActionResult<IEnumerable<TodoModel>>> GetToDoItems()
         {
             
@@ -31,6 +33,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Description("Fetch To Do by Id")] 
         public async Task<ActionResult<TodoModel>> GetToDoItem([FromRoute] GetToDoItemByIdQuery query)
         {
             var result = await _mediator.Send(query); 
@@ -38,6 +41,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpPost]
+        [Description("Create new To Do")] 
         public async Task<ActionResult<TodoModel>> CreateToDoItem(CreateToDoItemCommand command)
         {
             var result = await _mediator.Send(command);
@@ -45,6 +49,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Description("Update To Do by Id")] 
         public async Task<IActionResult> UpdateToDoItem(Guid id, UpdateToDoItemCommand command)
         {
             if (id != command.Id)
@@ -59,6 +64,7 @@ namespace ToDo.API.Controllers
 
 
         [HttpDelete("{id}")]
+        [Description("Delete To Do by Id")] 
         public async Task<IActionResult> DeleteToDoItem(Guid id)
         {
             var command = new DeleteToDoItemCommand { Id = id };
