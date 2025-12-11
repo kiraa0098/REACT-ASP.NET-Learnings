@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ToDo.Application.DTOs;
+using ToDo.Application.UseCases.Models;
 using ToDo.Application.UseCases.ToDoItems.Commands.CreateToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Commands.DeleteToDoItem;
 using ToDo.Application.UseCases.ToDoItems.Commands.UpdateToDoItem;
@@ -22,7 +22,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ToDoItemDto>>> GetToDoItems()
+        public async Task<ActionResult<IEnumerable<TodoModel>>> GetToDoItems()
         {
             var query = new GetToDoItemsQuery();
             var result = await _mediator.Send(query);
@@ -30,7 +30,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ToDoItemDto>> GetToDoItem(Guid id)
+        public async Task<ActionResult<TodoModel>> GetToDoItem(Guid id)
         {
             var query = new GetToDoItemByIdQuery { Id = id };
             var result = await _mediator.Send(query);
@@ -38,7 +38,7 @@ namespace ToDo.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ToDoItemDto>> CreateToDoItem(CreateToDoItemCommand command)
+        public async Task<ActionResult<TodoModel>> CreateToDoItem(CreateToDoItemCommand command)
         {
             var result = await _mediator.Send(command);
             return CreatedAtAction(nameof(GetToDoItem), new { id = result.Id }, result);

@@ -1,12 +1,12 @@
 using ClosedXML.Excel;
 using System.IO;
-using ToDo.Application.DTOs;
+using ToDo.Application.UseCases.Models;
 
 namespace ToDo.Application.Export;
 
 public class ToDoItemExporter : IToDoItemExporter
 {
-    public byte[] ExportToExcel(IEnumerable<ToDoItemDto> toDoItems)
+    public byte[] ExportToExcel(IEnumerable<TodoModel> toDoItems)
     {
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("ToDo Items");

@@ -1,11 +1,16 @@
 using MediatR;
-using ToDo.Application.DTOs;
+using ToDo.Application.UseCases.Models;
 using ToDo.Domain.Entities;
 using ToDo.Persistence.Context;
 
 namespace ToDo.Application.UseCases.ToDoItems.Commands.CreateToDoItem
 {
-    public class CreateToDoItemCommandHandler : IRequestHandler<CreateToDoItemCommand, ToDoItemDto>
+    public class CreateToDoItemCommand : IRequest<TodoModel>
+    {
+        public string? Title { get; set; }
+    }
+
+        public class CreateToDoItemCommandHandler : IRequestHandler<CreateToDoItemCommand, TodoModel>
     {
         private readonly ToDoDbContext _context;
 
@@ -14,7 +19,7 @@ namespace ToDo.Application.UseCases.ToDoItems.Commands.CreateToDoItem
             _context = context;
         }
 
-        public async Task<ToDoItemDto> Handle(CreateToDoItemCommand request, CancellationToken cancellationToken)
+        public async Task<TodoModel> Handle(CreateToDoItemCommand request, CancellationToken cancellationToken)
         {
             var todoItem = new ToDoItem
             {
@@ -26,7 +31,7 @@ namespace ToDo.Application.UseCases.ToDoItems.Commands.CreateToDoItem
             _context.ToDoItems.Add(todoItem);
             await _context.SaveChangesAsync(cancellationToken);
 
-            return new ToDoItemDto
+            return new TodoModel
             {
                 Id = todoItem.Id,
                 Title = todoItem.Title,

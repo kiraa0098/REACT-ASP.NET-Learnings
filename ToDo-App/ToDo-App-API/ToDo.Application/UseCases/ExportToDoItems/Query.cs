@@ -1,9 +1,12 @@
 using MediatR;
-using ToDo.Application.DTOs;
 using ToDo.Application.Export;
 using ToDo.Application.UseCases.ToDoItems.Queries.GetToDoItems;
 
 namespace ToDo.Application.UseCases.ToDoItems.Queries.ExportToDoItems;
+
+public class ExportToDoItemsQuery : IRequest<byte[]>
+{
+}
 
 public class ExportToDoItemsQueryHandler : IRequestHandler<ExportToDoItemsQuery, byte[]>
 {

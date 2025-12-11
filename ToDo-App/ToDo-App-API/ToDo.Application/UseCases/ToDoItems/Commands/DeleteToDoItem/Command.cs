@@ -1,10 +1,14 @@
 using MediatR;
-using ToDo.Application.UseCases.ToDoItems.Commands.DeleteToDoItem;
 using ToDo.Persistence.Context;
 
 namespace ToDo.Application.UseCases.ToDoItems.Commands.DeleteToDoItem
 {
-    public class DeleteToDoItemCommandHandler : IRequestHandler<DeleteToDoItemCommand>
+    public class DeleteToDoItemCommand : IRequest
+    {
+        public Guid Id { get; set; }
+    }
+
+        public class DeleteToDoItemCommandHandler : IRequestHandler<DeleteToDoItemCommand>
     {
         private readonly ToDoDbContext _context;
 

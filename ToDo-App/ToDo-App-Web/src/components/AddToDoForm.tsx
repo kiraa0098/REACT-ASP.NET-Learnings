@@ -20,16 +20,14 @@ const AddToDoForm: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<IFormInput>();
+  } = useForm<IFormInput>({
+    mode: 'onChange'
+  });
   const addToDo = useToDoStore((state) => state.addToDo);
 
   const onSubmit = (data: IFormInput) => {
     if (!navigator.onLine) {
       toast.error("You are offline. Please check your internet connection.");
-      return;
-    }
-    if (data.title.trim() === "") {
-      toast.error("To-Do title cannot be empty.");
       return;
     }
     addToDo(data.title);
@@ -42,7 +40,13 @@ const AddToDoForm: React.FC = () => {
         name="title"
         control={control}
         defaultValue=""
-        rules={{ required: "To-Do title is required." }}
+        rules={{ 
+            required: "To-Do title cannot be empty.",
+            maxLength: {
+                value: 100,
+                message: "Title must not exceed 100 characters."
+            }
+        }}
         render={({ field }) => (
           <FormControl fullWidth variant="standard" error={!!errors.title}>
             <Stack direction="row" spacing={2} alignItems="center">

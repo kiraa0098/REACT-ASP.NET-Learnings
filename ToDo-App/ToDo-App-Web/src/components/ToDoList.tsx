@@ -63,6 +63,10 @@ const ToDoList: React.FC = () => {
       toast.error("To-Do title cannot be empty.");
       return;
     }
+    if (editedTitle.length > 100) {
+      toast.error("Title must not exceed 100 characters.");
+      return;
+    }
     updateToDoTitle(todo, editedTitle);
     setEditingId(null);
   };

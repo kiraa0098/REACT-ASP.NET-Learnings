@@ -1,9 +1,6 @@
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
-using ToDo.Application.Behaviors;
 using ToDo.Application.Export;
 using ToDo.Persistence.Context;
 
@@ -14,16 +11,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();          
 builder.Services.AddMediatR(cfg =>
 {
-    cfg.RegisterServicesFromAssembly(typeof(ToDo.Application.Class1).Assembly);
-    cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+    cfg.RegisterServicesFromAssembly(typeof(IToDoItemExporter).Assembly);
 });
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
     });
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssembly(typeof(ToDo.Application.Class1).Assembly);
 builder.Services.AddScoped<IToDoItemExporter, ToDoItemExporter>();
 
 // Configure PostgreSQL and DbContext

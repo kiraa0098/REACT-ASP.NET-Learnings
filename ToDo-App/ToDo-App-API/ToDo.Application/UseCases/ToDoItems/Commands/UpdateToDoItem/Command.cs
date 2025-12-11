@@ -4,6 +4,13 @@ using ToDo.Persistence.Context;
 
 namespace ToDo.Application.UseCases.ToDoItems.Commands.UpdateToDoItem
 {
+    public class UpdateToDoItemCommand : IRequest
+    {
+        public Guid Id { get; set; }
+        public string? Title { get; set; }
+        public bool IsDone { get; set; }
+    }
+
     public class UpdateToDoItemCommandHandler : IRequestHandler<UpdateToDoItemCommand>
     {
         private readonly ToDoDbContext _context;

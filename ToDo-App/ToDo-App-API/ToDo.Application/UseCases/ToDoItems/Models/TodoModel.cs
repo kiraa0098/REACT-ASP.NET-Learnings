@@ -1,6 +1,6 @@
-namespace ToDo.Application.DTOs
+namespace ToDo.Application.UseCases.Models
 {
-    public class ToDoItemDto
+    public class TodoModel
     {
         public Guid Id { get; set; }
         public string? Title { get; set; }
