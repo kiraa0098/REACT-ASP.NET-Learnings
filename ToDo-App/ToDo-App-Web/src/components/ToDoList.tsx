@@ -24,6 +24,10 @@ const ToDoList: React.FC = () => {
   }, [fetchToDos]);
 
   const handleToggleToDo = (todo: ToDo) => {
+    if (!navigator.onLine) {
+        toast.error('You are offline. Please check your internet connection.');
+        return;
+    }
     // Trigger the animation
     const newAnimation = { ...animation };
     newAnimation[todo.id] = todo.isDone ? "strike-right-to-left" : "strike-left-to-right";
@@ -48,6 +52,10 @@ const ToDoList: React.FC = () => {
   };
 
   const handleSaveEdit = (todo: ToDo) => {
+    if (!navigator.onLine) {
+        toast.error('You are offline. Please check your internet connection.');
+        return;
+    }
     if (editedTitle.trim() === "") {
       toast.error("To-Do title cannot be empty.");
       return;
@@ -60,6 +68,14 @@ const ToDoList: React.FC = () => {
     setEditingId(null);
     setEditedTitle("");
   };
+
+  const handleDelete = (id: string) => {
+    if (!navigator.onLine) {
+        toast.error('You are offline. Please check your internet connection.');
+        return;
+    }
+    deleteToDo(id);
+  }
 
   return (
     <Stack spacing={2}>
@@ -113,7 +129,7 @@ const ToDoList: React.FC = () => {
             ) : (
               <>
                 <Button variant="text" color="primary" onClick={() => handleEdit(todo)}>Edit</Button>
-                <Button variant="text" color="error" onClick={() => deleteToDo(todo.id)}>Delete</Button>
+                <Button variant="text" color="error" onClick={() => handleDelete(todo.id)}>Delete</Button>
               </>
             )}
           </Box>
