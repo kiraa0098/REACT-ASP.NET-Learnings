@@ -21,7 +21,7 @@ const AddToDoForm: React.FC = () => {
     reset,
     formState: { errors },
   } = useForm<IFormInput>({
-    mode: 'onChange'
+    mode: "onChange",
   });
   const addToDo = useToDoStore((state) => state.addToDo);
 
@@ -40,12 +40,12 @@ const AddToDoForm: React.FC = () => {
         name="title"
         control={control}
         defaultValue=""
-        rules={{ 
-            required: "To-Do title cannot be empty.",
-            maxLength: {
-                value: 100,
-                message: "Title must not exceed 100 characters."
-            }
+        rules={{
+          required: "To-Do title cannot be empty.",
+          maxLength: {
+            value: 100,
+            message: "Title must not exceed 100 characters.",
+          },
         }}
         render={({ field }) => (
           <FormControl fullWidth variant="standard" error={!!errors.title}>
