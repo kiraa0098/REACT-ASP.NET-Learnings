@@ -14,7 +14,7 @@ public class ToDoItemExporter : IToDoItemExporter
 {
     public byte[] ExportToExcel(IEnumerable<TodoModel> toDoItems)
     {
-        // ... (The rest of the implementation code)
+
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("ToDo Items");
 
