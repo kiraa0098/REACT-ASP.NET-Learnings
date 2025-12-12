@@ -26,7 +26,7 @@ namespace ToDo.Application.UseCases.ToDoItems.Commands.UpdateToDoItem
 
             if (todoItem == null)
             {
-                // Or throw an exception
+            
                 return;
             }
 

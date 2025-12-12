@@ -1,41 +1,41 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: 'light', // Ensure light mode is explicitly set
+    mode: "light",
     background: {
-      default: '#f5f5f5', // Soft grey for the main background
-      paper: '#ffffff', // White for cards and other paper-like surfaces
+      default: "#f5f5f5",
+      paper: "#ffffff",
     },
     text: {
-      primary: '#213547', // Dark slate gray for primary text
-      secondary: 'rgba(33, 53, 71, 0.7)', // Slightly lighter for secondary text
+      primary: "#213547",
+      secondary: "rgba(33, 53, 71, 0.7)",
     },
     primary: {
-      main: '#424242', // Dark grey for primary actions
+      main: "#424242",
     },
     secondary: {
-      main: '#616161', // A slightly different shade of grey
+      main: "#616161",
     },
   },
   typography: {
     fontFamily: [
-      'cursive',
-      'system-ui',
-      'Avenir',
-      'Helvetica',
-      'Arial',
-      'sans-serif',
-    ].join(','),
+      "cursive",
+      "system-ui",
+      "Avenir",
+      "Helvetica",
+      "Arial",
+      "sans-serif",
+    ].join(","),
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
           borderRadius: 8,
-          textTransform: 'none', // Prevent uppercase by default
-          '&:focus-visible': {
-            outline: 'none',
+          textTransform: "none", // Prevent uppercase by default
+          "&:focus-visible": {
+            outline: "none",
           },
         },
       },
@@ -50,8 +50,8 @@ const theme = createTheme({
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          '&:focus-visible': {
-            outline: 'none',
+          "&:focus-visible": {
+            outline: "none",
           },
         },
       },
@@ -59,8 +59,8 @@ const theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          '&:focus-visible': {
-            outline: 'none',
+          "&:focus-visible": {
+            outline: "none",
           },
         },
       },

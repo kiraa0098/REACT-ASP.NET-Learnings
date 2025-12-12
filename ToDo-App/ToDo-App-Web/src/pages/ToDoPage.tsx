@@ -26,19 +26,19 @@ const ToDoPage: React.FC = () => {
     <Paper
       elevation={3}
       sx={{
-        width: "75%", // Use % for parent width
+        width: "75%",
         height: "90vh",
         overflowY: "auto",
         position: "relative",
-        backgroundColor: "#fffde7", // A light yellow color similar to Google Keep
+        backgroundColor: "#fffde7",
         "&::-webkit-scrollbar": {
           width: "8px",
         },
         "&::-webkit-scrollbar-track": {
-          backgroundColor: "#fffde7", // Match notebook background
+          backgroundColor: "#fffde7",
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#c4b59d", // A brownish color for the thumb
+          backgroundColor: "#c4b59d",
           borderRadius: "4px",
         },
       }}

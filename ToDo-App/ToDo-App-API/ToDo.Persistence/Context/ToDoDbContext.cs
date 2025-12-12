@@ -14,7 +14,6 @@ public class ToDoDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // Add any model configurations here
     }
 }
 
