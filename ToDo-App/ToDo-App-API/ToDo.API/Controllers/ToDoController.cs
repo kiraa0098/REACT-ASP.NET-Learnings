@@ -73,6 +73,8 @@ namespace ToDo.API.Controllers
         }
 
         [HttpGet("export")]
+        //hindi ko sure kung anong output nito since walang Excel Software sa laptop na gamit ko
+        //hindi ko makita output T.T 
         public async Task<FileResult> ExportToDoItems()
         {
             var query = new ExportToDoItemsQuery();
